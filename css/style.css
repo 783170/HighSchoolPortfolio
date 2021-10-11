@@ -46,7 +46,11 @@ body {
   height: 400;
   border: 0px;
 }
-
+.desc {
+  font-size: 2vw;
+  color: #65785D;
+  width: 400px;
+}
 .para {
   font-size: 2vw;
   color: #65785D;
