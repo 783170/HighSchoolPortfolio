@@ -47,6 +47,7 @@ body {
   border: 0px;
 }
 .desc {
+  padding: 5vw;
   font-size: 2vw;
   color: #65785D;
   width: 40vw;
