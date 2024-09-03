@@ -1,0 +1,126 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/nav.css">
+    <style>
+      .aniaml {
+        border: 0;
+        padding: 0; 
+        width: 20vw; 
+        height: 20vw;
+      }
+      .adv {
+        border: 0;
+        padding: 2vw 3vw; 
+        width: 27.5vw; 
+        height: 30vw;
+      }
+      .desc {
+        border: 0;
+        padding: 0vw 3vw; 
+        width: 50vw; 
+        height: 30vw;
+        font-size: 1.75vw;
+        color: #65785D;
+      }
+      .tab { 
+        margin: 0;
+        padding: 0;
+        font-size: 1.75vw;
+        color: #65785D;
+        margin-left: 40px; 
+      }
+    </style>
+  </head>
+  <body>
+    <img class="header-img" src="../../images/swirl-top.jpg">
+    <p class="header"><span>&#x291C</span>Erin De Witt's Portfolio<span>&#x291B</span></p>
+    <img class="header-img" src="../../images/swirl-bot.jpg">
+
+    <div class="navbar">
+      <a href="../../index.html">Home</a>
+      <div class="dropdown">
+      <button class="dropbtn">Projects <span>&#x25BC;</span></button>
+        <div class="dropdown-content">
+          <a href="../year1.html">AP Computer Science Principles (year 1)</a>
+          <a href="../year2.html">AP Computer Science A (year 2)</a>
+          <a href="../year3.html">Advanced Computer Science (year 3)</a>
+        </div>
+      </div> 
+      <a href="../about-me.html">About Me</a>
+      <a href="../deep-thoughts.html">Deep Thoughts</a>
+      <a href="../photo-gallery.html">Photo Gallery</a>
+    </div>
+
+    <p class="title">Advanced Computer Science</p>
+    <p class="subtitle">Chemotaxis</p>
+    
+    <ul><li><a href="../year3.html">Return To Home</a></li></ul>
+    
+    <div class="container" style="flex-container: flex-start">
+      <iframe class= "adv" src="https://editor.p5js.org/783170/full/ew825LqyG"></iframe>
+      <div class="desc"> 
+        <p style="font-size: 2.5vw" > Basics <br> </p>
+        <p> If you clicked the screen to the left a randomly sized circle will be draw. These circles are drawn using a random walk to model the concept of cheomotaxis. Below is the function that moves the "animals" towards the right and randomly up and down while the dot is still visable: </p>
+        <p style="margin-bottom: 0"> moveAnimal () { <br> </p>
+        <p class="tab">
+        if(this.x < width * 1.25) <br>
+        this.x++; <br> 
+        if(this.x < width * 1.25) <br>
+        this.y+=random(-1,1); <br>
+        </p>
+        <p style="margin-top: 0"> } </p>
+      </div>
+    </div>
+
+    <div class="container" style="flex-container: flex-start">
+      <iframe class= "adv" src="https://editor.p5js.org/783170/full/9TDs_M7Ep"></iframe>
+      <div class="desc"> 
+        <p> If you clicked the screen to the left either a Penguin or a FancyPenguin will be drawn. Both of these object are extentions of the same Animal class which allows them to move in the same way. Below is the code that shows the array of object instanciations and how they are called by the click of the mouse: </p>
+
+        <p style="margin-bottom: 0"> function draw() { </p>
+          <p class="tab"> animals = [new Penguin(mouseX, mouseY), new FancyPenguin(mouseX, mouseY)]; <br>
+          ... </p>
+        <p style="margin-bottom: 0; margin-top: 0"> } <br>
+        class Animal {...} <br>
+        class FancyPenguin extends Animal {...} <br>
+        class Penguin extends Animal {...} <br>
+        function mousePressed() { </p>
+          <p class="tab"> p[i++%3] = animals[floor(random(2))]; </p>
+        <p style="margin-top: 0"> } </p>
+        </div>
+    </div>
+
+    <div class="desc" style="padding: 5vw; width: 90vw; height: 14vw" >
+      <p>If you click any of the four screens below one of my animal designs will be drawn. Each of these animals has their own class that extends the SeaAnimal class so they can inherit the same move function. I create each of these animals from scratch using ellipsis, curves, lines, triangles, and other basic shapes. </p>
+      <p class="tab">
+      - the fish are draw randomly either orange or pink. <br>
+      - the shark is the most basic and is drawn the same way each time <br>
+      - the seahorse has an overridden move method that uses a sine function to create an up and down movement <br>
+      - the puffer fish uses its original x and y position and the distance it has travelled to grow. As it travels from left to right the fish grows taller and its spines grow propotionally to give it a more authentic puffer fish look</p>
+    </div>
+
+    <div class="container" style="flex-container: flex-start; margin-top: 2vw">
+      <div><iframe class= "aniaml" src="https://editor.p5js.org/783170/full/XKafTDljK"></iframe></div>
+      <div><iframe class= "aniaml" src="https://editor.p5js.org/783170/full/31-L9N4KQ"></iframe></div>
+      <div><iframe class= "aniaml" src="https://editor.p5js.org/783170/full/sYgNRi16z"></iframe></div>
+      <div><iframe class= "aniaml" src="https://editor.p5js.org/783170/full/FK1nqlKtn"></iframe></div>
+    </div>
+
+    <div class="container" style="flex-container: flex-start">
+      <div class="desc" style="width: 43vw">
+        <p style="font-size: 2.5vw" > Final Result <br> </p>
+        <p>To the right is the final version of my chemotaxis project. If you clicked the screen one of four animals will be randomly drawn. Each of these animals will be generated at a different frequency to create a more well balanced final look.</p>
+        <p>Below is a link to a collection of all versions of this project. On this collection you can view my full code and interact with it.</p>
+        <p><a style="color: #BD7837" href="https://editor.p5js.org/783170/collections/mDJrjKlWT">Chemotaxis</a></p>
+        </div>
+        
+      <iframe class= "adv" style="width: 46vw" src="https://editor.p5js.org/783170/full/5u2YhXs_H"></iframe>
+    </div>
+
+  </body>
+</html>
